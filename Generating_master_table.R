@@ -3,6 +3,12 @@ library(tidyverse)
 library(seqinr)
 library(dplyr)
 
+
+#Human genome was downloaded from gencode (v38) and processed using the following pipeline.
+#In brief, this script filters for coding sequences that are divisible by 3, start with an nTG start site and finish with a stop codon as well as other preprocessing steps.
+# https://www.gencodegenes.org/human/  Human> Fasta files> fastqProtein-coding transcript sequences
+#https://github.com/Bushell-lab/Ribo-seq/tree/main/Python_scripts
+
 path_to_fastas = "N:/R11/bioinformatics_resources/FASTAs/human/GENCODE/v38/filtered/spliced"
 
 
