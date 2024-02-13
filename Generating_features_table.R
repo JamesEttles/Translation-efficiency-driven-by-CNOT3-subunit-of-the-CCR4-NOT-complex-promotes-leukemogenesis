@@ -10,8 +10,10 @@ library(readxl)
 
 path_to_tables = "N:/R11/bioinformatics_resources/FASTAs/human/GENCODE/v38/transcript_info"
 
+# W. Liu, X. Wang, Prediction of functional microRNA targets by integrative modeling of microRNA binding and target expression data. Genome Biology 20, 18 (2019).
 miRNAs <- read_csv(file.path(path_to_tables,"gencode.v38.pc_transcripts_filtered_miRNA_binding_sites.csv"))
 
+# J. M. Mudge et al., Standardized annotation of translated open reading frames. Nat Biotechnol 40, 994-999 (2022).
 uORFs <- read_excel(path = "N:/R11/bioinformatics_resources/Gene_lists/Phase_I_Ribo-seq_ORFs/41587_2022_1369_MOESM2_ESM.xlsx", 
                     sheet = "S2. PHASE I Ribo-seq ORFs")
 
