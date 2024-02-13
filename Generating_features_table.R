@@ -24,6 +24,7 @@ uORFs <- uORFs %>%
 
 master <- fread(file = "N:/R11/James/sequences/master.csv", header = T, drop = "V1")
 
+# signal sequences were derived from SignalP https://services.healthtech.dtu.dk/services/SignalP-5.0/
 signalseqs <- read_csv(file.path(path_to_tables,"SignalP_6_prediction_results.csv")) %>%
   select(gene, transcript, Prediction) %>%
   mutate(signal_sequence = factor(case_when(Prediction == "NO_SP" ~ FALSE,
